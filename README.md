@@ -32,8 +32,7 @@ templates, and more.
 
 ### Hardware requirements
 For an optimal student experience, we recommend the following hardware configuration:
-* **OS**: Windows 7 SP1 64-bit, Windows 8.1 64-bit or Windows 10 64-bit, Ubuntu Linux, or the latest
-version of OS X
+* **OS**: Windows 7 SP1 64-bit, Windows 8.1 64-bit or Windows 10 64-bit, Ubuntu Linux (16.04 or later), or the latest version of OS X
 * **Memory**: 4GB RAM 
 * **Hard disk**: 40GB or more
 * An Internet connection
@@ -44,9 +43,33 @@ version of OS X
 You’ll also need the following software installed in advance:
 * Browser: Google Chrome/Mozilla Firefox Latest Version
 * VSCode IDE, Latest Version
-* Compiler: LLVM clang, Latest Version
+* Compiler:
+    - Windows: Build Tools for Visual Studio 2017
+    - Linux: gcc, 6.0 or later
+    - OS X: xcode (? @antonio: to verify)
 
+#### Setting up the build environment
 
+##### Windows
+
+1. Install the [build tools for visual studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)
+2. Open "Developer Command Prompt for VS 2017" from the start menu
+3. You can now run the C++ compiler (`cl.exe`) from that prompt
+
+For problems [see the walkthrough](https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line?view=vs-2017).
+
+##### Ubuntu
+
+1. Open a Terminal (ctrl + shift + T)
+2. Type `sudo apt-get update` then perss Enter
+3. Type `sudo apt-get install build-essential` then press Enter. Respond with yes at the questions.
+4. You can now run the C++ compiler (`g++`) from any terminal
+
+##### Os X
+
+1. Instruction
+2. Instruction
+3. Instruction
 
 
 
