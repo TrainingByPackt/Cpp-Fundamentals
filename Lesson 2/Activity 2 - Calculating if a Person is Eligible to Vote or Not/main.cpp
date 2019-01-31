@@ -9,7 +9,7 @@ bool byreference_can_vote(int& age) {
     } else {
         int reqAge = 18;
         int yearsToGo = reqAge-age;
-        std::cout << "No worries champ, just "<< yearsToGo << " more years to go." << std::endl;
+        std::cout << "No worries, just "<< yearsToGo << " more years to go." << std::endl;
         age = reqAge;
         return false;
     }
