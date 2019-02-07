@@ -65,7 +65,7 @@ For problems [see the walkthrough](https://docs.microsoft.com/en-us/cpp/build/wa
 3. Type `sudo apt-get install build-essential` then press Enter. Respond with yes at the questions.
 4. You can now run the C++ compiler (`g++`) from any terminal
 
-##### Os X
+##### MacOS
 
 1. Open a Terminal (found in /Applications/Utilities/)
 2. Type `xcode-select --install` then press Enter
