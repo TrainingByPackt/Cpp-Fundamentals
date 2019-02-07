@@ -46,7 +46,7 @@ You’ll also need the following software installed in advance:
 * Compiler:
     - Windows: Build Tools for Visual Studio 2017
     - Linux: gcc, 6.0 or later
-    - OS X: xcode (? @antonio: to verify)
+    - OS X: Xcode 10.1, or later
 
 #### Setting up the build environment
 
@@ -67,9 +67,10 @@ For problems [see the walkthrough](https://docs.microsoft.com/en-us/cpp/build/wa
 
 ##### Os X
 
-1. Instruction
-2. Instruction
-3. Instruction
+1. Open a Terminal (found in /Applications/Utilities/)
+2. Type `xcode-select --install` then press Enter
+3. A software update popup window will appear, click “Install” and agree to the Terms of Service when requested.
+4. You can now run the C++ compiler (`clag++`) from any terminal
 
 
 
