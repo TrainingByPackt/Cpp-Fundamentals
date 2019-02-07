@@ -46,7 +46,7 @@ You’ll also need the following software installed in advance:
 * Compiler:
     - Windows: Build Tools for Visual Studio 2017
     - Linux: gcc, 6.0 or later
-    - OS X: Xcode 10.1, or later
+    - MacOS: Xcode 10.1, or later
 
 #### Setting up the build environment
 
