@@ -1,7 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues/TrainingByPackt/BeginningCPlusPlus.svg)](https://github.com/TrainingByPackt/BeginningCPlusPlus/issues)
-[![GitHub forks](https://img.shields.io/github/forks/TrainingByPackt/BeginningCPlusPlus.svg)](https://github.com/TrainingByPackt/BeginningCPlusPlus/network)
-[![GitHub stars](https://img.shields.io/github/stars/TrainingByPackt/BeginningCPlusPlus.svg)](https://github.com/TrainingByPacktBeginningCPlusPlus/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TrainingByPackt/BeginningCPlusPlus/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/TrainingByPackt/Cpp-Fundamentals.svg)](https://github.com/TrainingByPackt/Cpp-Fundamentals/issues)
+[![GitHub forks](https://img.shields.io/github/forks/TrainingByPackt/Cpp-Fundamentals.svg)](https://github.com/TrainingByPackt/Cpp-Fundamentals/network)
+[![GitHub stars](https://img.shields.io/github/stars/TrainingByPackt/Cpp-Fundamentals.svg)](https://github.com/TrainingByPackt/Cpp-Fundamentals/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TrainingByPackt/Cpp-Fundamentals/pulls)
 
 
 
