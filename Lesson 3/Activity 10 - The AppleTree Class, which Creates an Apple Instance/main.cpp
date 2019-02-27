@@ -13,7 +13,7 @@ class AppleTree
   public:
 	Apple createFruit(){
       Apple apple;
-      std::cout << "apple created" << std::endl;
+      std::cout << "apple created!" << std::endl;
       return apple;
     }
 };
