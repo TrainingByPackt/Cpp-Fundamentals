@@ -5,7 +5,7 @@
 
 
 
-# Beginning C++ By Packt
+# C++ Fundamentals By Packt
 C++ has been a major player in the software development industry for more than 30 years, supporting some of
 the most successful companies in the world.
 In recent years, the interest in the language has been growing more than ever and the language is now
