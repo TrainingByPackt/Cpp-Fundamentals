@@ -93,3 +93,16 @@ int main() {
               << result[1] << ", " << result[2] << "]" << std::endl;
 
 }
+
+/*
+
+    Output:
+
+    Initial matrix:
+    1 2
+    3 4
+    5 6
+
+    Result of multiplication (with plus instead of multiply): [20, 24, 28]
+
+ */

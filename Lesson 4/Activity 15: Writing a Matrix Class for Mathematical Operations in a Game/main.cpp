@@ -90,3 +90,21 @@ int main() {
               << result[1] << ", " << result[2] << "]" << std::endl;
 
 }
+
+/*
+    Output:
+
+    Initial matrix:
+    1 2
+    3 4
+    5 6
+
+    Setting matrix[1][1] to 7
+    Modified matrix:
+    1 2
+    3 7
+    5 6
+
+    Result of multiplication: [26, 87, 94]
+
+ */

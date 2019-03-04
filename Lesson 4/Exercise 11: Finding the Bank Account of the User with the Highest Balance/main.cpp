@@ -35,6 +35,13 @@ int main() {
     std::cout << "The greater amount between Uk accounts is " << getMaxAmount(ukAccount1, ukAccount2) << std::endl;
 }
 
+/*
+    Output:
+
+    The greater amount between Eu accounts is 2000
+    The greater amount between Uk accounts is 2500
+
+ */
 
 /*
 Expanded code for UKBankAccount:

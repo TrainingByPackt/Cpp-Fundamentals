@@ -43,3 +43,12 @@ int main() {
     UserAccount userAccountUdp = readObjectFromConnection<UserAccount>(udpConnection);
     std::cout << "Deserialized on UDP: " << userAccountUdp << std::endl;
 }
+
+/*
+    Output:
+
+    Original: userId: 1 email: something@email.com
+    Deserialized on TCP: userId: 1 email: something@email.com
+    Deserialized on UDP: userId: 1 email: something@email.com
+
+ */

@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 struct UserIdentifier {
     int userId = 0;
@@ -50,16 +51,26 @@ void addItems(Cart& cart, std::vector<Item> items) {
     std::cout << "Items added" << std::endl;
 }
 
+void replaceItem(Cart& cart, Item toRemove, Item toAdd) {
+    removeItem(cart, toRemove);
+    addItems(cart, {toAdd});
+}
+
 // This is a function which is used to call other functions.
 // Action is the function to execute.
-// Parameter is the parameter to pass to the function, in addition to
-// the cart
-template<typename Action, typename Parameter>
-void execute_on_user_cart(UserIdentifier user, Action action, Parameter&& parameter) {
+// Parameters is the ist of parameters to pass to the function, in addition to
+// the cart.
+// Parameter is a variadic template parameter pack: it can contain a group of types
+// instead of a single type like regular type parameters.
+template<typename Action, typename... Parameters>
+// Note the ... after the type: we need to expand the parameter pack to use it.
+// The compiler will complain otherwise!
+void execute_on_user_cart(UserIdentifier user, Action action, Parameters&&... parameters) {
     if(isLoggedIn(user)) {
         Cart cart = getUserCart(user);
         // We expect Action to be a function, so we call it with the cart and the parameter!
-        action(cart, std::forward<Parameter>(parameter));
+        // Here we expand the expression containing the parameter pack.
+        action(cart, std::forward<Parameters>(parameters)...);
     } else {
         std::cout << "The user is not logged in" << std::endl;
     }
@@ -71,11 +82,33 @@ int main() {
 
     UserIdentifier loggedInUser{0};
     // The user is logged in, we will add the items
-    std::cout << "Adding items if the user is logged in" << std::endl;
-    execute_on_user_cart(loggedInUser, addItems, std::vector<Item>({toothbrush, toothpaste}));
+    std::cout << "Replacing items if the user is logged in" << std::endl;
+    execute_on_user_cart(loggedInUser, replaceItem, toothbrush, toothpaste);
 
-    UserIdentifier loggedOutUser{1};
-    // The user is not logged in, we will not remove the item
-    std::cout << "Removing item if the user is logged out" << std::endl;
-    execute_on_user_cart(loggedOutUser, removeItem, toothbrush);
 }
+/*
+
+Output:
+
+Replacing items if the user is logged in
+Item removed
+Items added
+
+/*
+
+When we call 'execute_on_user_cart' it gets expanded by the compiler like this:
+
+// Action is a function pointer which takes a Cart and 2 Item and return a void
+// The ref-ness of arg0 and arg1 is deduced with the rules we saw earlier.
+// In this case it's deduced to non-const ref
+void execute_on_user_cart(UserIdentifier user, void(*replaceItem)(Cart&, Item, Item), Item& arg0, Item& arg1) {
+    if(isLoggedIn(user)) {
+        Cart cart = getUserCart(user);
+        // Note: the expression has been copy-pasted for each argument
+        replaceItem(cart, std::forward<Item&>(arg0), std::forward<Item&>(arg1));
+    } else {
+        std::cout << "The user is not logged in" << std::endl;
+    }
+}
+
+*/

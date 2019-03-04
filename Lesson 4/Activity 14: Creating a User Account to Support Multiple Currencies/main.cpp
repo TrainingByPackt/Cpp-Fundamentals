@@ -53,3 +53,20 @@ int main() {
     std::cout << "+100 (USD)" << std::endl;
     std::cout << "Balance: " << eurAccount.getBalance().d_value << " (EUR)" << std::endl;
 }
+
+/*
+    Output:
+
+    Balance: 1000 (GBP)
+    +100 (EUR)
+    Balance: 1089 (GBP)
+    +200 (GBP)
+    Balance: 1289 (GBP)
+    New balance
+    Balance: 2000 (EUR)
+    +400 (GBP)
+    Balance: 2446 (EUR)
+    +100 (USD)
+    Balance: 2533 (EUR)
+
+ */
