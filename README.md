@@ -18,6 +18,7 @@ Learn the unique features of C++, discover the new features added in C++11, C++1
 understand why the language has been so widely successful for more than 30 years, keeping up with other
 modern languages.
 
+**Authors**: Antonio Mallia, Francesco Zoffoli
 
 ## What you will learn
 * Get a solid introduction on the language, its tools, and how you can transform your ideas into
