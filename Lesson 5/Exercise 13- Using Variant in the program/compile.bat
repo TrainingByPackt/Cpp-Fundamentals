@@ -2,4 +2,4 @@
 mkdir build
 
 :: Build main.cpp
-cl /EHsc /Fobuild/ /Febuild/ /W4 main.cpp
+cl /EHsc /Fobuild/ /Febuild/ /W4 /std:c++17 main.cpp

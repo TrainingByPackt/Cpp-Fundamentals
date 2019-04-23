@@ -1,30 +1,19 @@
 #include <iostream>
-#include <memory>
-#include <userprofile_activity18.h>
-
-class UserProfileStorageFactory {
-public:
-    // Note: we are creating the derived class in the body of the function
-    std::unique_ptr<UserProfileStorage> create() const {
-        return std::make_unique<UserProfileCache>();
-    }
-};
-
-
-void getUserProfile(const UserProfileStorageFactory& storageFactory) {
-    // The current function "owns" the memory for the UserProfileStorage
-    // though the unique_ptr, but it doesn't know which instance of the
-    // storage it is using. It could even change during run time.
-    std::unique_ptr<UserProfileStorage> storage = storageFactory.create();
-    UserId user;
-    std::cout << "Retrieving user profile from the factory generated storage" << std::endl;
-    storage->getUserProfile(user);
-    // The storage is automatically destroyed
-}
-
+#include <array>
 
 int main()
 {
-    UserProfileStorageFactory factory;
-    getUserProfile(factory);
+    std::array<int, 10> accounts;
+    for(std::size_t i = 0; i < accounts.size(); i++) {
+        accounts[i] = i;
+    }
+
+    accounts.front() = 100;
+    accounts.back() = 200;
+
+    std::cout << "Elements:";
+    for(int& account: accounts) {
+        std::cout << " " << account;
+    }
+    std::cout << std::endl;
 }
