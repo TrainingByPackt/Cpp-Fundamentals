@@ -1,22 +1,21 @@
 ﻿#include <iostream>
 
 class Vehicle {
-    public:
-        void turnOn(){
-            std::cout<< "Vehicle: turn on" << std::endl;
-        }
+public:
+    virtual void turnOn(){
+        std::cout<< "Vehicle: turn on" << std::endl;
+    }
 };
 
 class Car : public Vehicle {
-    public:
-        virtual void turnOn() {
-            std::cout << "Car: turn on" << std::endl;
-        }
+public:
+    virtual void turnOn() {
+        std::cout << "Car: turn on" << std::endl;
+    }
 };
 
 void myTurnOn(Vehicle& vehicle) {
-    std::cout << "Calling turnOn() on the vehicle reference" <<
-std::endl;
+    std::cout << "Calling turnOn() on the vehicle reference" << std::endl;
     vehicle.turnOn();
 }
 
