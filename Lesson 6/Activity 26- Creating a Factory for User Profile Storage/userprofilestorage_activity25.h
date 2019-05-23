@@ -1,4 +1,7 @@
-﻿#include <iostream>
+#ifndef USER_PROFILE_STORAGE_H
+#define USER_PROFILE_STORAGE_H
+
+// Copied from Activity 25
 
 struct UserProfile {};
 struct UserId {};
@@ -23,14 +26,4 @@ public:
     }
 };
 
-void exampleOfUsage(const UserProfileStorage& storage) {
-    UserId user;
-    std::cout << "About to retrieve the user profile from the storage" << std::endl;
-    UserProfile UserProfile = storage.getUserProfile(user);
-}
-
-int main()
-{
-    UserProfileCache cache;
-    exampleOfUsage(cache);
-}
+#endif

@@ -2,9 +2,9 @@
 mkdir build
 
 :: Build main.cpp
-:: We include the header from Activity 18, so we can reuse the types defined there
-:: To do it, we created a symbolic link in the current folder to the header in Activity 18
-:: so that it's easy to access the file while working from the folder for Activity 19
+:: We copied some structures from Activity 25, so we can reuse the types defined there.
+:: Since we put them in an header, we need to tell the compiler to look for the headers
+:: in the current folder when including headers.
 cl /EHsc /Fobuild/ /Febuild/ /W4 /I . main.cpp
 
 :: You can not run the program at build\main.exe
